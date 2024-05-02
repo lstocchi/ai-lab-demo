@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Quarkus Web Bundler</title>
+    <title>Ai Lab demo</title>
     {#bundle tag="style"/}
 </head>
-<body>
-<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100 mt-5">
-    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-            <i class="bi bi-lightning-fill"></i>
-            <strong class="me-auto toast-title"></strong>
-            <small>/hello</small>
-        </div>
-        <div class="toast-body">
+<body class="bg-light">
+    <div id="loader" style="--bs-bg-opacity: .75" class="d-none position-absolute w-100 h-100 d-flex bg-white flex-col justify-content-center align-items-center text-center">
+        <div class="spinner-border text-primary">
+            <span class="sr-only"></span>
         </div>
     </div>
+<div aria-live="polite" aria-atomic="true" style="max-width: 600px;" class="flex flex-col mx-auto justify-content-center align-items-center w-100 mt-5">
+    <div class="h-4/6 bg-gradient-to-r from-sky-600 to-purple-700 py-24">
+        <h1>Summarizer</h1>
+    </div>
+    <div>
+        <textarea id="text" rows="15" name="text" class="resize rounded-md w-100" placeholder="Add the text you want to summarize"></textarea>
+    </div>
+        
+    <div class="flex items-center justify-between">
+        <button id="button" class="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+        Summarize
+        </button>
+    </div>
+    
+    <div id="summarization" class="w-full whitespace-pre-wrap  mt-5"></div>
 </div>
 {#bundle tag="script"/}
 </body>

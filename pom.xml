@@ -47,9 +47,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-        <groupId>io.quarkiverse.langchain4j</groupId>
-        <artifactId>quarkus-langchain4j-openai</artifactId>
-        <version>0.12.0</version>
+      <groupId>io.quarkiverse.langchain4j</groupId>
+      <artifactId>quarkus-langchain4j-mistral-ai</artifactId>
+      <version>0.12.1</version>
     </dependency>
     <dependency>
             <groupId>dev.langchain4j</groupId>
@@ -65,6 +65,10 @@
       <groupId>io.quarkiverse.web-bundler</groupId>
       <artifactId>quarkus-web-bundler</artifactId>
       <version>${quarkus-web-bundler.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-websockets</artifactId>
     </dependency>
     <dependency>
       <groupId>org.mvnpm</groupId>
